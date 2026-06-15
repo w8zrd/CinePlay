@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>CinePlay — Watch Free Movies &amp; TV Shows Online</title>
+  <meta name="description" content="Watch free movies and TV shows online on CinePlay. Stream thousands of popular, top-rated and upcoming titles instantly — no sign-up needed."/>
+  <meta name="keywords" content="watch free movies online, stream movies free, free movie streaming, watch TV shows online, CinePlay, free streaming, popular movies 2025"/>
+  <meta name="author" content="CinePlay"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <meta name="theme-color" content="#0b0b0f"/>
+  <link rel="canonical" href="https://www.playimdb.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="CinePlay"/>
+  <meta property="og:title" content="CinePlay — Watch Free Movies &amp; TV Shows Online"/>
+  <meta property="og:description" content="Stream thousands of movies and TV shows instantly for free. No sign-up required."/>
+  <meta property="og:url" content="https://www.playimdb.com/"/>
+  <meta property="og:image" content="https://w8zrd.github.io/CinePlay/og-image.jpg"/>
+  <meta property="og:image:secure_url" content="https://w8zrd.github.io/CinePlay/og-image.jpg"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="CinePlay — Free Movie and TV Streaming"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CinePlay — Watch Free Movies &amp; TV Shows Online"/>
+  <meta name="twitter:description" content="Stream thousands of movies and TV shows instantly for free. No sign-up required."/>
+  <meta name="twitter:image" content="https://w8zrd.github.io/CinePlay/og-image.jpg"/>
+  <link rel="icon" type="image/x-icon"   href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16"   href="favicon-16x16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32"   href="favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="48x48"   href="favicon-48x48.png"/>
+  <link rel="icon" type="image/png" sizes="96x96"   href="favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png"/>
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="msapplication-TileColor" content="#0b0b0f"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.playimdb.com/#website","url":"https://www.playimdb.com/","name":"CinePlay","description":"Watch free movies and TV shows online.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.playimdb.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https://www.playimdb.com/#org","name":"CinePlay","url":"https://www.playimdb.com/"}]}</script>
+  <link rel="preconnect" href="https://api.themoviedb.org"/>
+  <link rel="preconnect" href="https://image.tmdb.org"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="logo">Cine<span>Play</span></a>
+  <nav class="header-nav">
+    <button class="mode-btn active" data-mode="movie">Movies</button>
+    <button class="mode-btn" data-mode="tv">TV Shows</button>
+  </nav>
+  <form id="search-form" role="search">
+    <input id="search-input" type="search" placeholder="Search movies &amp; shows…" autocomplete="off"/>
+    <button class="btn-search" type="submit">Search</button>
+  </form>
+</header>
+
+<!-- HERO BANNER -->
+<section id="hero" style="opacity:0;transition:opacity .4s">
+  <div id="hero-track"></div>
+  <div id="hero-grad"></div>
+  <div id="hero-content">
+    <div id="hero-label">Trending Now</div>
+    <h2 id="hero-title"></h2>
+    <div id="hero-meta"></div>
+    <p id="hero-overview"></p>
+    <div id="hero-actions">
+      <button id="hero-watch-btn">Watch Now</button>
+      <button id="hero-more-btn">More Info</button>
+    </div>
+  </div>
+  <div id="hero-dots"></div>
+  <button id="hero-prev" aria-label="Previous">&#8249;</button>
+  <button id="hero-next" aria-label="Next">&#8250;</button>
+</section>
+
+<!-- BROWSE BAR -->
+<div id="browse-bar">
+  <div id="tabs-scroll">
+    <button class="tab-btn active" data-tab="popular">Popular</button>
+    <button class="tab-btn" data-tab="trending">Trending</button>
+    <button class="tab-btn" data-tab="top_rated">Top Rated</button>
+    <button class="tab-btn" data-tab="upcoming">Upcoming</button>
+  </div>
+  <button id="filter-btn" aria-haspopup="true" aria-expanded="false">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Filter
+  </button>
+</div>
+
+<!-- FILTER PANEL -->
+<div id="filter-panel" style="display:none">
+  <div class="fp-section">
+    <div class="fp-label">Genre</div>
+    <div id="genre-chips" class="chip-row"></div>
+  </div>
+  <div class="fp-section">
+    <div class="fp-label">Year</div>
+    <div id="year-chips" class="chip-row"></div>
+  </div>
+  <div class="fp-section">
+    <div class="fp-label">Min Rating</div>
+    <div id="rating-chips" class="chip-row"></div>
+  </div>
+  <div class="fp-footer">
+    <button id="filter-clear">Clear All</button>
+    <button id="filter-apply">Apply</button>
+  </div>
+</div>
+
+<!-- RECENTLY VIEWED -->
+<div id="recent-section" style="display:none">
+  <div class="row-header"><span class="row-title">Recently Viewed</span><button id="clear-recent">Clear</button></div>
+  <div id="recent-grid" class="mini-grid"></div>
+</div>
+
+<!-- MAIN -->
+<main id="main">
+  <div class="section-header">
+    <span id="section-title" class="section-title"></span>
+    <span id="section-count" class="section-count"></span>
+  </div>
+  <div id="spinner" class="state"><div class="loader"></div></div>
+  <div id="empty-state" class="state" style="display:none"><p>No results found. Try a different search or filter.</p></div>
+  <div id="err-state" class="state" style="display:none"><p>Something went wrong. Please try again.</p></div>
+  <div id="grid"></div>
+  <div id="pagination" style="display:none">
+    <button class="page-btn" id="btn-prev">Prev</button>
+    <span id="page-info"></span>
+    <button class="page-btn" id="btn-next">Next</button>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div id="modal-overlay" role="dialog" aria-modal="true" style="display:none">
+  <div id="modal">
+    <div id="modal-back-wrap">
+      <img id="modal-backdrop" src="" alt=""/>
+      <div id="modal-back-grad"></div>
+      <button id="modal-close" aria-label="Close">&#10005;</button>
+    </div>
+    <div id="modal-loading" style="display:none"><div class="loader"></div></div>
+    <div id="modal-body">
+      <div id="modal-head">
+        <img id="modal-poster" src="" alt="" style="display:none"/>
+        <div id="modal-info">
+          <div id="modal-title"></div>
+          <div id="modal-orig"></div>
+          <div id="modal-pills"></div>
+        </div>
+      </div>
+      <p id="modal-overview"></p>
+      <div id="modal-meta"></div>
+      <div id="modal-cast-wrap" style="display:none">
+        <div class="meta-label" style="margin-bottom:8px">Cast</div>
+        <div id="modal-cast"></div>
+      </div>
+      <div id="modal-cta"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Cine<span>Play</span></div>
+      <p>Free movie and TV streaming. No sign-up required.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Browse</h4>
+        <a href="#">Popular Movies</a>
+        <a href="#">Top Rated</a>
+        <a href="#">Trending</a>
+        <a href="#">TV Shows</a>
+      </div>
+      <div class="footer-col">
+        <h4>Genres</h4>
+        <a href="#">Action</a>
+        <a href="#">Comedy</a>
+        <a href="#">Horror</a>
+        <a href="#">Sci-Fi</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CinePlay</span>
+    <span class="tmdb-credit">Data by <span class="tmdb-badge">TMDB</span></span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
